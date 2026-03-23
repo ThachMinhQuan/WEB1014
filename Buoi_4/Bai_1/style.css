@@ -1,0 +1,16 @@
+.D1{
+    background-color: #50d1e0;
+}
+.D2{
+    background-color: rgb(180, 34, 85);
+}
+#S1{
+    background-color: green;
+}
+.S2{
+    background-color: orange;
+}
+.D2 p{
+    font-variant: normal;
+
+}

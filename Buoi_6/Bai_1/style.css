@@ -1,0 +1,14 @@
+.D1{
+    background-color: red;
+    width: 300px;
+    height: 200px;
+}
+.D2{
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    height: 200px;
+    border: 3px solid black;
+    border-radius: 20px;
+    box-shadow: -10px -10px 5px red;
+}
