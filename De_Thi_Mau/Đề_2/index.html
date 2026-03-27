@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề thi 02 - WEB1013</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <a href="#"><img src="img/logo.png" alt="Vinamilk Logo" /></a>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#" class="active">Trang chủ</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Thể thao</a></li>
+                    <li><a href="#">Văn hóa</a></li>
+                    <li><a href="#">Xã hội</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="search-form">
+                <form id="searchForm" onsubmit="return validateForm(event)">
+                    <input type="text" id="searchInput" name="q" placeholder="Tìm kiếm..." required>
+                    <button type="submit">TÌM</button>
+                    <div id="formError" class="error-msg">Vui lòng nhập từ khóa tìm kiếm.</div>
+                </form>
+            </div>
+        </header>
+
+        <!-- Banner -->
+        <section class="banner">
+            <a href="#"><img src="img/banner.png" alt="Vinamilk Green Farm" /></a>
+        </section>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h2 class="section-title">HOẠT ĐỘNG NỔI BẬT</h2>
+            
+            <div class="news-container">
+                <!-- ADM Section (Row 1) -->
+                <article class="post-row">
+                    <div class="post-image">
+                        <a href="#"><img src="img/khuyenmai.jpg" alt="Sữa ADM"></a>
+                    </div>
+                    <div class="post-text">
+                        <h3 class="post-title"><a href="#">Chương trình khuyến dùng Sữa dinh dưỡng Vinamilk ADM mua 8 tặng 1</a></h3>
+                        <p><strong>Đơn vị tổ chức: Công ty Cổ phần Sữa Việt Nam</strong></p>
+                        <p><strong>1. Tên chương trình:</strong> Chương trình khuyến dùng sữa dinh dưỡng</p>
+                    </div>
+                </article>
+
+                <!-- Susu and Hero Section (Row 2) -->
+                <div class="post-grid">
+                    <article class="post-col">
+                        <div class="post-image">
+                            <a href="#"><img src="img/susu.jpg" alt="Sữa Susu"></a>
+                        </div>
+                        <div class="post-text">
+                            <h3 class="post-title"><a href="#">CTKD Susu sưu tầm thẻ đổi lồng đèn/ hộp bút POP-IT, thẻ điện thoại và...</a></h3>
+                            <p>Chương trình khuyến mại: “Khuyến dùng SuSu sưu tầm thẻ đổi lồng đèn/ hộp bút pop-it, thẻ điện thoại và bộ túi ngủ đi học”</p>
+                        </div>
+                    </article>
+
+                    <article class="post-col">
+                        <div class="post-image">
+                            <a href="#"><img src="img/hero.jpg" alt="Sữa Hero"></a>
+                        </div>
+                        <div class="post-text">
+                            <h3 class="post-title"><a href="#">Chương trình khuyến mãi hấp dẫn “Nạp Hero – chào hè rộn ràng, săn quà...</a></h3>
+                            <p><strong>I. THÔNG TIN CHƯƠNG TRÌNH:</strong></p>
+                            <p>1. Tên chương trình: NẠP HERO – CHÀO HÈ RỘN RÀNG, SĂN QUÀ HẤP DẪN</p>
+                            <p>2. Đối tượng tham gia:...</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-text">TÊN SINH VIÊN</div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function validateForm(e) {
+            e.preventDefault();
+            const q = document.getElementById('searchInput').value.trim();
+            const error = document.getElementById('formError');
+            
+            // Validate form: input cannot be empty
+            if (q === '') {
+                error.style.display = 'block';
+                return false;
+            }
+            
+            error.style.display = 'none';
+            alert('Đã gửi tìm kiếm: ' + q);
+            return true;
+        }
+    </script>
+</body>
+</html>

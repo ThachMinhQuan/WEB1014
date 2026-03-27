@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề thi 01 - WEB1013</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <a href="#"><img src="img/Logo.png" alt="Lazada Logo" /></a>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#" class="active">Trang chủ</a></li>
+                    <li><a href="#">Thương hiệu</a></li>
+                    <li><a href="#">Khuyến mại</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Banner -->
+        <section class="banner">
+            <a href="#"><img src="img/banner2.jpg" alt="Banner" /></a>
+        </section>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Article 1: Vans -->
+            <article class="post">
+                <div class="post-text">
+                    <h2 class="post-title"><a href="#">Chặng đường phát triển của thương hiệu Vans qua từng thời kỳ</a></h2>
+                    <p>Bạn là một tín đồ giày Vans nhưng vẫn chưa nắm được những thông tin về lịch sử hình thành và phát triển của thương hiệu? Hãy cùng tìm hiểu qua bài chia sẻ dưới đây để có thêm nhiều kiến thức bổ ích nhé.</p>
+                    <a href="#" class="btn-readmore">ĐỌC THÊM</a>
+                </div>
+                <div class="post-image">
+                    <a href="#"><img src="img/vans.jpg" alt="Thương hiệu Vans"></a>
+                </div>
+            </article>
+
+            <!-- Article 2: Nars -->
+            <article class="post">
+                <div class="post-text">
+                    <h2 class="post-title"><a href="#">Thương hiệu Nars: Lịch sử hình thành và phát triển qua các năm</a></h2>
+                    <p>Bạn là tín đồ mỹ phẩm Nars nhưng vẫn chưa nắm được những thông tin về lịch sử hình thành và phát triển của thương hiệu? Hãy cùng tìm hiểu qua bài chia sẻ dưới đây để có thêm nhiều kiến thức bổ ích nhé.</p>
+                    <a href="#" class="btn-readmore">ĐỌC THÊM</a>
+                </div>
+                <div class="post-image">
+                    <a href="#"><img src="img/nars.jpg" alt="Thương hiệu Nars"></a>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">LAZADA</div>
+            <div class="footer-form">
+                <form id="subscribeForm" onsubmit="return validateForm(event)">
+                    <div style="position: relative;">
+                        <input type="email" id="emailInput" name="email" placeholder="EMAIL" required>
+                        <button type="submit">GỬI</button>
+                        <div id="formError" style="color: #ffcccc; font-size: 13px; position: absolute; bottom: -22px; left: 0; display: none;">Vui lòng nhập đúng định dạng email.</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function validateForm(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            const error = document.getElementById('formError');
+            
+            // Regex for basic email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!email || !emailPattern.test(email)) {
+                error.style.display = 'block';
+                return false;
+            }
+            
+            error.style.display = 'none';
+            alert('Gửi thông tin thành công!');
+            // e.target.submit(); // Uncomment if submitting to server
+            return true;
+        }
+    </script>
+</body>
+</html>
