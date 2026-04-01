@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex và Grid với DIV</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Ví dụ tạo DIV với display:flex và display:grid</h1>
+
+  <h2>1. Flex - hàng ngang (row)</h2>
+  <div class="flex-row">
+    <div class="box red">Flex Item 1</div>
+    <div class="box blue">Flex Item 2</div>
+    <div class="box green">Flex Item 3</div>
+  </div>
+
+  <h2>2. Flex - cột dọc (column)</h2>
+  <div class="flex-column">
+    <div class="box red">Flex Item A</div>
+    <div class="box blue">Flex Item B</div>
+    <div class="box orange">Flex Item C</div>
+  </div>
+
+  <h2>3. Flex - wrap (gói nhiều dòng khi không đủ rộng)</h2>
+  <div class="flex-wrap">
+    <div class="box red" style="flex: 1 1 120px;">Item 1</div>
+    <div class="box blue" style="flex: 1 1 120px;">Item 2</div>
+    <div class="box green" style="flex: 1 1 120px;">Item 3</div>
+    <div class="box orange" style="flex: 1 1 120px;">Item 4</div>
+    <div class="box blue">Item 5</div>
+  </div>
+
+  <h2>4. Grid - 2x2</h2>
+  <div class="grid-2x2">
+    <div class="box red">Grid 1</div>
+    <div class="box blue">Grid 2</div>
+    <div class="box green">Grid 3</div>
+    <div class="box orange">Grid 4</div>
+  </div>
+
+  <h2>5. Grid - lưới tuỳ chỉnh (3 cột, 2 hàng)</h2>
+  <div class="grid-custom">
+    <div class="box red">Cột 1</div>
+    <div class="box blue">Cột 2</div>
+    <div class="box green">Cột 3</div>
+    <div class="box orange">Cột 4</div>
+    <div class="box red">Cột 5</div>
+    <div class="box blue">Cột 6</div>
+  </div>
+
+</body>
+</html>

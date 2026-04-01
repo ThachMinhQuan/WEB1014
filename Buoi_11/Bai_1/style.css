@@ -1,0 +1,72 @@
+﻿body { font-family: Arial, sans-serif; 
+    padding: 16px; 
+}
+h2 { 
+    margin-top: 32px; 
+}
+.box { 
+    padding: 16px; 
+    color: white; 
+    font-weight: bold; 
+    text-align: center; 
+}
+.red   { 
+    background: #e74c3c; 
+}
+.blue  { 
+    background: #3498db; 
+}
+.green { 
+    background: #2ecc71; 
+}
+.orange{ 
+    background: #f39c12; 
+}
+
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border: 2px dashed #333;
+  padding: 10px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px dashed #333;
+  padding: 10px;
+  width: 250px;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border: 2px dashed #333;
+  padding: 10px;
+  width: 400px;
+}
+
+
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  border: 2px dashed #333;
+  padding: 10px;
+}
+
+.grid-custom {
+  display: grid;
+  grid-template-columns: 100px 2fr 1fr;
+  grid-template-rows: 80px 80px;
+  gap: 8px;
+  border: 2px dashed #333;
+  padding: 10px;
+  width: 500px;
+}
+
+.grid-custom .box { min-height: 40px; }
